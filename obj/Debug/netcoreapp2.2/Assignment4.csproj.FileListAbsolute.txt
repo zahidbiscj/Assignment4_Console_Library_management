@@ -1,0 +1,11 @@
+D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.dll
+D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.deps.json
+D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.runtimeconfig.json
+D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.runtimeconfig.dev.json
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.csproj.CoreCompileInputs.cache
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.AssemblyInfoInputs.cache
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.AssemblyInfo.cs
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.dll
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.pdb
+D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.csprojAssemblyReference.cache
+D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.pdb

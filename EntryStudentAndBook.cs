@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Assignment4
+{
+    public class EntryStudentAndBook
+    {
+        public void EntryStudentInfo(LibraryContext context)
+        {
+            Student student = new Student();
+            Console.WriteLine("===============================");
+            Console.WriteLine("Entry Student Information center");
+            Console.Write("Please enter student Id: ");
+            student.Id = int.Parse(Console.ReadLine());
+
+            Console.Write("Please enter student Name: ");
+            student.Name = Console.ReadLine();
+
+            student.FineAmount = 0;
+            Console.WriteLine("===============================");
+
+            context.Students.Add(new Student()
+            {
+                Id = student.Id,
+                Name = student.Name,
+                FineAmount = 0
+            });
+            context.SaveChanges();
+        }
+
+
+
+        public void EntryBookInfo(LibraryContext context)
+        {
+            Book book = new Book();
+            Console.WriteLine("===============================");
+            Console.WriteLine("Entry Book Information Center");
+
+            Console.Write("Please enter Book Title: ");
+            book.Title = Console.ReadLine();
+
+            Console.Write("Please enter Book Author: ");
+            book.Author = Console.ReadLine();
+
+            Console.Write("Please enter Book Edition: ");
+            book.Edition = Console.ReadLine();
+
+            Console.Write("Please enter Barcode of the book: ");
+            book.BarCode = Console.ReadLine();
+
+            Console.Write("Please enter Copy Count of the book: ");
+            book.CopyCount = int.Parse(Console.ReadLine());
+            Console.WriteLine("===============================");
+
+            context.Books.Add(new Book()
+            {
+                Author = book.Author,
+                Edition = book.Edition,
+                Title = book.Title,
+                BarCode = book.BarCode,
+                CopyCount = book.CopyCount
+            });
+            context.SaveChanges();
+        }
+    }
+}
