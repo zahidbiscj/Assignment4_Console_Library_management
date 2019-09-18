@@ -9,3 +9,14 @@ D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.dll
 D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.pdb
 D:\Visual Studio Project\Assignment4\obj\Debug\netcoreapp2.2\Assignment4.csprojAssemblyReference.cache
 D:\Visual Studio Project\Assignment4\bin\Debug\netcoreapp2.2\Assignment4.pdb
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\bin\Debug\netcoreapp2.2\Assignment4.deps.json
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\bin\Debug\netcoreapp2.2\Assignment4.runtimeconfig.json
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\bin\Debug\netcoreapp2.2\Assignment4.runtimeconfig.dev.json
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\bin\Debug\netcoreapp2.2\Assignment4.dll
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\bin\Debug\netcoreapp2.2\Assignment4.pdb
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.csprojAssemblyReference.cache
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.csproj.CoreCompileInputs.cache
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.AssemblyInfoInputs.cache
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.AssemblyInfo.cs
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.dll
+D:\Full Stack Asp net core course materials\Practiced all File\Assignment4_Console_Library_management\obj\Debug\netcoreapp2.2\Assignment4.pdb

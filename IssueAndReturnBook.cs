@@ -38,6 +38,9 @@ namespace Assignment4
                         bookId = b.Id,
                         IssueDate = DateTime.UtcNow
                     });
+       //Issue korle ekta boi niye gese tai copyCount 1 Decrement
+                    var bookAvailableCopyCount = context.Books.Where(x => x.BarCode == book.BarCode).SingleOrDefault();
+                    bookAvailableCopyCount.CopyCount -= 1;
                     context.SaveChanges();
                 }
 
@@ -73,6 +76,9 @@ namespace Assignment4
                 StudentUpdate.FineAmount = fine;
                 Console.WriteLine("Fine Updated Successfully");
             }
+            //Receive korle ekta boi ferot paise tai copyCount 1 increment
+            var bookAvailableCopyCount = context.Books.Where(x => x.BarCode == book.BarCode).SingleOrDefault();
+            bookAvailableCopyCount.CopyCount += 1;
             context.SaveChanges();
 
             Console.WriteLine("===============================");
