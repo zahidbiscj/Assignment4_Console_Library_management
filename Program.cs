@@ -14,22 +14,23 @@ namespace Assignment4
 
         label:
             Console.Clear();
-            Console.WriteLine("\t\t\t\t===============================");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\t=================================================================================");
             Console.WriteLine("\t\t\t\tWelcome to library system.");
 
             Console.WriteLine("\t\t\t\tTo entry student information enter: 1");
             Console.WriteLine("\t\t\t\tTo entry book information enter: 2");
             Console.WriteLine("\t\t\t\tTo issue a book, enter: 3");
             Console.WriteLine("\t\t\t\tTo return a book enter: 4");
-            Console.WriteLine("\t\t\t\t To check fine, enter: 5 ");
-            Console.WriteLine("\t\t\t\t To receive fine, enter: 6");
-            Console.WriteLine("\t\t\t\t================================");
-
-       
+            Console.WriteLine("\t\t\t\tTo check fine, enter: 5 ");
+            Console.WriteLine("\t\t\t\tTo receive fine, enter: 6");
+            Console.WriteLine("\t=================================================================================");
             try
             {
                 Console.Write("\n\n\nPlease enter your choice: ");
                 int ch = int.Parse(Console.ReadLine());
+            
+
                 Console.WriteLine("=================================");
 
                 switch (ch)
@@ -69,10 +70,10 @@ namespace Assignment4
                         Console.WriteLine("Invalid Key Given. Please Try Again");
                         break;
                 }
+
             }
-            catch (Exception e) {
-                Console.WriteLine("You typed an invalid Option. Please try again");
-            }
+            catch (Exception e) { Console.WriteLine(e.Message); }
+
             Console.WriteLine("Please Enter any key to Continue......");
             Console.ReadKey();
 

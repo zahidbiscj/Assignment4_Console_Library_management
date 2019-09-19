@@ -28,7 +28,10 @@ namespace Assignment4
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            
+/*            builder.Entity<Book>(user =>
+            {
+                user.HasIndex(x => x.BarCode).IsUnique(true);
+            });*/
 
             builder.Entity<IssueBook>()
                 .HasKey(ib => new { ib.StudentId, ib.bookId});
@@ -48,7 +51,7 @@ namespace Assignment4
         public DbSet<Student> Students { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<IssueBook> IssueBook { get; set; }
-        public DbSet<ReturnBook> ReturnBooks { get; set; }
+        public DbSet<ReturnBook> ReturnBook { get; set; }
     }
 }
 
