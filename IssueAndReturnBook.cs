@@ -79,6 +79,15 @@ namespace Assignment4
             //Receive korle ekta boi ferot paise tai copyCount 1 increment
             var bookAvailableCopyCount = context.Books.Where(x => x.BarCode == book.BarCode).SingleOrDefault();
             bookAvailableCopyCount.CopyCount += 1;
+
+            context.ReturnBooks.Add(new ReturnBook()
+            {
+                StudentId = student.Id,
+                BookId = book.Id,
+                BookBarCode = book.BarCode,
+                ReturnDate = DateTime.UtcNow
+            });
+
             context.SaveChanges();
             Console.WriteLine("\n\n Books Received Successfuly...");
             Console.WriteLine("===============================");
