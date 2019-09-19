@@ -46,7 +46,7 @@ namespace Assignment4
 
             var RemainingFineBalance = CheckFine.FineAmount - student.FineAmount;
 
-            if (RemainingFineBalance < 0) { Console.WriteLine("Sorry !! The amount cannot be negative"); }
+            if (RemainingFineBalance < 0) { Console.WriteLine("Sorry !! Transaction failed.. Receive Actual Fine"); }
 
             else
             {

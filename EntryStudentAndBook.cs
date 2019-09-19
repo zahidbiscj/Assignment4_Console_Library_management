@@ -9,8 +9,9 @@ namespace Assignment4
         public void EntryStudentInfo(LibraryContext context)
         {
             Student student = new Student();
-            Console.WriteLine("===============================");
+            
             Console.WriteLine("Entry Student Information center");
+            Console.WriteLine("===============================");
             Console.Write("Please enter student Id: ");
             student.Id = int.Parse(Console.ReadLine());
 
@@ -27,6 +28,7 @@ namespace Assignment4
                 FineAmount = 0
             });
             context.SaveChanges();
+            Console.WriteLine("Student Inserted Successfully !!!!! ");
         }
 
 
@@ -34,9 +36,9 @@ namespace Assignment4
         public void EntryBookInfo(LibraryContext context)
         {
             Book book = new Book();
-            Console.WriteLine("===============================");
+            
             Console.WriteLine("Entry Book Information Center");
-
+            Console.WriteLine("===============================");
             Console.Write("Please enter Book Title: ");
             book.Title = Console.ReadLine();
 
@@ -62,6 +64,7 @@ namespace Assignment4
                 CopyCount = book.CopyCount
             });
             context.SaveChanges();
+            Console.WriteLine("Books Inserted Successfully !!!!! ");
         }
     }
 }

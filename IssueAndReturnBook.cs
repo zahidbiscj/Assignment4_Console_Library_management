@@ -10,9 +10,9 @@ namespace Assignment4
         {
             Student student = new Student();
             Book book = new Book();
-            Console.WriteLine("===============================");
+            
             Console.WriteLine("Issue a book to student");
-
+            Console.WriteLine("===============================");
             Console.Write("Please Enter Student Id : ");
             student.Id = int.Parse(Console.ReadLine());
 
@@ -29,10 +29,9 @@ namespace Assignment4
                     context.Books.Any(db => db.BarCode == book.BarCode) &&
                     context.Books.Any(db => db.CopyCount >= 0))
                 {
-                    Console.WriteLine("Book Issues Successfully");
+    
                     context.IssueBook.Add(new IssueBook()
                     {
-                        
                         StudentId = student.Id,
                         BookBarCode = book.BarCode,
                         bookId = b.Id,
@@ -42,6 +41,7 @@ namespace Assignment4
                     var bookAvailableCopyCount = context.Books.Where(x => x.BarCode == book.BarCode).SingleOrDefault();
                     bookAvailableCopyCount.CopyCount -= 1;
                     context.SaveChanges();
+                    Console.WriteLine("Book Issues Successfully");
                 }
 
             }
@@ -65,7 +65,7 @@ namespace Assignment4
             Console.Write("Please Enter Book Barcode : ");
             book.BarCode = Console.ReadLine();
 
-            var b = context.IssueBook.Where(x => x.BookBarCode == book.BarCode).SingleOrDefault();
+            var b = context.IssueBook.Where(x => x.BookBarCode == book.BarCode && x.StudentId == student.Id).FirstOrDefault();
             var c = ((DateTime.UtcNow - b.IssueDate).Days)-1;
             var WeekDays = 7;
             var StudentUpdate = context.Students.Where(x => x.Id == student.Id).SingleOrDefault();
@@ -80,7 +80,7 @@ namespace Assignment4
             var bookAvailableCopyCount = context.Books.Where(x => x.BarCode == book.BarCode).SingleOrDefault();
             bookAvailableCopyCount.CopyCount += 1;
             context.SaveChanges();
-
+            Console.WriteLine("\n\n Books Received Successfuly...");
             Console.WriteLine("===============================");
         }
     }

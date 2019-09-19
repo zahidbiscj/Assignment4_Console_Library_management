@@ -11,10 +11,12 @@ namespace Assignment4
         static void Main(string[] args)
         {
             var context = new LibraryContext();
-            
+
+        label:
+            Console.Clear();
             Console.WriteLine("\t\t\t\t===============================");
             Console.WriteLine("\t\t\t\tWelcome to library system.");
-            
+
             Console.WriteLine("\t\t\t\tTo entry student information enter: 1");
             Console.WriteLine("\t\t\t\tTo entry book information enter: 2");
             Console.WriteLine("\t\t\t\tTo issue a book, enter: 3");
@@ -23,54 +25,62 @@ namespace Assignment4
             Console.WriteLine("\t\t\t\t To receive fine, enter: 6");
             Console.WriteLine("\t\t\t\t================================");
 
-            label:
-
-            Console.Write("\n\n\nPlease enter your choice:");
-            int ch = int.Parse(Console.ReadLine());
-            Console.WriteLine("=================================");
-            
-            switch (ch)
+       
+            try
             {
+                Console.Write("\n\n\nPlease enter your choice: ");
+                int ch = int.Parse(Console.ReadLine());
+                Console.WriteLine("=================================");
+
+                switch (ch)
+                {
 
 
-                case 1:
-                    var sb = new EntryStudentAndBook();
-                    sb.EntryStudentInfo(context);
-                    break;
+                    case 1:
+                        var sb = new EntryStudentAndBook();
+                        sb.EntryStudentInfo(context);
+                        break;
 
-                case 2:
-                    var sbc = new EntryStudentAndBook();
-                    sbc.EntryBookInfo(context);
-                    break;
+                    case 2:
+                        var sbc = new EntryStudentAndBook();
+                        sbc.EntryBookInfo(context);
+                        break;
 
-                case 3:
-                    var n = new IssueAndReturnBook();
-                    n.IssueBook(context);
-                    break;
+                    case 3:
+                        var n = new IssueAndReturnBook();
+                        n.IssueBook(context);
+                        break;
 
-                case 4:
-                    var r = new IssueAndReturnBook();
-                    r.ReturnBook(context);
-                    break;
+                    case 4:
+                        var r = new IssueAndReturnBook();
+                        r.ReturnBook(context);
+                        break;
 
-                case 5:
-                    var cf = new CheckAndReceiveFine();
-                    cf.CheckFine(context);
-                    break;
-                case 6:
-                    var cfa = new CheckAndReceiveFine();
-                    cfa.ReceiveFine(context);
-                    break;
+                    case 5:
+                        var cf = new CheckAndReceiveFine();
+                        cf.CheckFine(context);
+                        break;
+                    case 6:
+                        var cfa = new CheckAndReceiveFine();
+                        cfa.ReceiveFine(context);
+                        break;
 
-                default:
-                    Console.WriteLine("Invalid Key Given. Please Try Again");
-                    break;
+                    default:
+                        Console.WriteLine("Invalid Key Given. Please Try Again");
+                        break;
+                }
             }
+            catch (Exception e) {
+                Console.WriteLine("You typed an invalid Option. Please try again");
+            }
+            Console.WriteLine("Please Enter any key to Continue......");
+            Console.ReadKey();
 
             goto label;
-        }
-        
+            }
 
+
+            
 
 
       
